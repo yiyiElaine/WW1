@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Home</title>
+	<title>Overview</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,8 +19,6 @@
 
 <body>
 
-
-
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -29,7 +27,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>                        
 			</button>
-			<a class="navbar-brand" href="main.html">Home</a>
+			<a class="navbar-brand" href="/">Home</a>
 		</div>
 
 		<div class="collapse navbar-collapse" id="myNavbar">
@@ -40,7 +38,7 @@
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Story<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="/viewstories">Read stories</a></li>
+						<li><a href="viewstories.html">Read stories</a></li>
 						<li><a href="new_user.html">Tell your story</a></li>
 					</ul>
 				</li>
@@ -62,58 +60,30 @@
 </nav>
 
 
-<div class="slider">
-	<div class="slide active-slide">
+<div class="overview">
+	<div id="maCemeteryOverview">
 		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<a href="#"><center><img src="/images/pics/front.png" class="img-responsive"></center></a>
-				</div>
-			</div>
-       </div>
-    </div>
-
-	<div class="slide">
-       <div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<a href="#"><center><img src="/images/pics/p1.png" class="img-responsive"></center></a>
-				</div>
-			</div>
-       </div>
-	</div> 
-
-    <div class="slide">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ac.png" class="img-responsive"></a>
-				</div>
-			</div>
-       </div>     
-	</div> 
-	
-    <div class="slide">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ac.png" class="img-responsive"></a>
-				</div>
-			</div>
-       </div>     
+			<h2>Meuse-Argonne Cemetery Overview</h2>
+			<br>
+			<p>Within the Meuse-Argonne American Cemetery and Memorial in France, which covers 130.5 acres, rest the largest number of our military dead in Europe, a total of 14,246. Most of those buried here lost their lives during the Meuse-Argonne Offensive of World War I. The immense array of headstones rises in long regular rows upward beyond a wide central pool to the chapel that crowns the ridge. A beautiful bronze screen separates the chapel foyer from the interior, which is decorated with stained-glass windows portraying American unit insignia; behind the altar are flags of the principal Allied nations.</p>
+			
+			<p>On either side of the chapel are memorial loggias. One panel of the west loggia contains a map of the Meuse-Argonne Offensive. Inscribed on the remaining panels of both loggias are Tablets of the Missing with 954 names, including those from the U.S. expedition to northern Russia in 1918-1919. Rosettes mark the names of those since recovered and identified.</p>
+			
+			<center><img src="/images/pics/M-A.jpg" class="img-responsive"/></center>
+		</div>
 	</div>
+		
+	<div id="wwihistory">
+		<div class="container">
+			<h2>WWI History</h2>
+			<br>
+			<!--<div class="embed-responsive embed-responsive-4by3">-->
+				<center><iframe width="560" height="315" src="https://www.youtube.com/embed/qrCMFu-Drwo" frameborder="0" allowfullscreen></iframe>
+			<!--</div>-->
+		</div>
+	</div>
+	<br><br><br>
 </div>
 
-<div class="slider-nav">
-	<a href="#" class="arrow-prev"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
-	<ul class="slider-dots">
-		<li class="dot active-dot">&bull;</li>
-       <li class="dot">&bull;</li>
-       <li class="dot">&bull;</li>
-       <li class="dot">&bull;</li>
-	</ul>
-	<a href="#" class="arrow-next"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
-</div> 
-
-</body>
+<body>
 </html>
