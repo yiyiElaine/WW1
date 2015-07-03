@@ -18,5 +18,8 @@ router.get('/viewstories', function(req, res, next) {
   res.render('viewstories');
 });
 
+router.get('/map', function(req, res, next) {
+  res.render('map');
+});
 
 module.exports = router;
