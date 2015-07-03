@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF5gohqDmnOqH5bykwtgoxl1D15J-pkhY">
+    </script>
+    <script type="text/javascript">
+      var middle = new google.maps.LatLng(49.333, 5.0949);
+      var markers = [
+            ['Sample Marker 1', 49.3309, 5.093],
+            ['Sample Marker 2', 49.3332, 5.0940],
+            ['Sample Marker 3', 49.3334, 5.091],
+            ['Sample Marker 4', 49.3317, 5.0943],
+            ['Sample Marker 5', 49.336, 5.0951]
+        ]
+      function initialize() {
+        var mapOptions = {
+          center: { lat: 49.333, lng: 5.0949},
+          zoom: 16
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+        
+        //add markers
+        for( i = 0; i < markers.length; i++ ) {
+            var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+           // bounds.extend(position);
+            marker = new google.maps.Marker({
+                position: position,
+                map: map,
+                title: 'test'
+            }); 
+        }
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+      function addMarkers() {
+      }
+    </script>
+  </head>
+  <body>
+<div id="map-canvas"></div>
+  </body>
+</html>
