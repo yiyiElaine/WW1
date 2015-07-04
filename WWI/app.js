@@ -8,6 +8,12 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+/*passport-auth0*/
+var passport = require('passport');
+var strategy = require('./setup-passport');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+
 var app = express();
 
 // view engine setup
@@ -23,6 +29,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'views')));
+
+
+// passport-auth0 middlewares
+app.use(cookieParser());
+app.use(session({secret: 'shhhhhhhhh'}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', routes);
 app.use('/users', users);
