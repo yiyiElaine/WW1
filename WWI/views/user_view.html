@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Read Stories</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/public/stylesheets/bootstrap.min.css">
+        <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="/public/javascripts/bootstrap.min.js"></script>
+
+        <script src="/public/slider.js"> </script>
+        <link href="/public/app.css" rel="stylesheet">
+        <link href="/public/stylesheets/style.css" rel="stylesheet">
+
+</head>
+<body>
+        <nav class="navbar navbar-default" id = "mynavbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="/">Home</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/overview">Overview</a></li>
+                        <li><a href="/places2see">Places to See</a></li>
+                        <li><a href="/map">Map</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Story<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/viewstories">Read stories</a></li>
+                                <li><a href="new_user.html">Tell your story</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Hours</a></li>
+                                <li><a href="#">Tickets</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+              
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><img class="avatar" src="{{user.picture}}"/><p>Welcome {{user.nickname}}</p></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+<div class="viewstory">
+	<div class="container">	
+		<h1>View Stories</h1>
+		<div>
+			<form method="get" action="http://www.google.com"> 
+				<table cellpadding="0px" cellspacing="0px"> 
+					<tr> 
+						<td style="border-style:solid none solid solid;border-color:#4B7B9F;border-width:1px;">
+						<input type="text" name="zoom_query" placeholder="Enter Keyword Here..." style="width:120px; border:0px solid; height:17px; padding:0px 3px; position:relative;"> 
+						</td>
+						<td style="border-style:solid;border-color:#4B7B9F;border-width:1px;"> 
+						<input type="submit" value="" style="border-style: none; background: url('./images/searchbutton1.png') no-repeat; width: 25px; height: 25px;">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<br>
+		<br>
+		<h2>Stories List</h2>
+		<div>
+		<ul>
+		  <a href="story1.php">Story 1</a><br>
+		  Story 2<br>
+		  Story 3<br>
+		</ul>
+		</div>
+		<br>
+		<p><a href="/">Back to Home</a> or <a>Tell us your stories</a><p>
+
+	</div>
+</div>
+</body>
+</html>
